@@ -1,0 +1,121 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #e0e0e0;
+	color: #1d1d1d;
+}
+
+.contEncabezado {
+	position: fixed;
+	top: 0;
+	background-color: #100a1f;
+	display: flex;
+	text-align: center;
+	width: 100%;
+	padding: 2%;
+	box-sizing: border-box;
+}
+
+.contenedorLinks {
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none; /*para quitar las viñetas de la lista*/
+    width: 100%;
+	font-size: 80%;
+}
+
+.links-item {
+	margin: 0;
+    transition: .5s;
+}
+
+.links-item a {
+	
+    text-decoration: none;
+    text-decoration: none;
+    justify-content: center;
+    background-size: cover;
+    background: scroll;
+    height: inherit;
+    border-radius: 10px;
+    align-items: center;
+}
+
+a:hover {
+	cursor: pointer;
+	color: #fff;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 80px auto 100px auto;
+
+	/*para una pagina de galeria responsibe*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    gap: 40px;
+    grid-auto-flow: dense;
+}
+
+.contenedor .pelicula {
+	text-align: center;
+	transition: transform 0.3s ease-in-out;
+}
+
+.pelicula:hover {
+	filter: opacity(0.9);
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.contenedor .pelicula .titulo {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contenedor .pelicula .poster {
+	width: 90%;
+	height: 90%;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+.paginacion {
+	position: fixed;
+	bottom: 0;
+	background: #100a1f;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px;
+}
+
+.paginacion button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background: #241744;
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+}
+
+.paginacion button:hover {
+	background: #137c32;
+}
