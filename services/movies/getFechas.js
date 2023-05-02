@@ -4,8 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     getFechas();
 });
 
+let agregarFechas = [];
+
 async function getFechas() {
-    for (let pagina = 1; pagina < 501; pagina ++ ) {
+    //total de registros 500
+    //se van hacer para solo 10 registros
+    for (let pagina = 1; pagina < 11; pagina ++ ) {
 
         const URL_API = `https://api.themoviedb.org/3/movie/popular?api_key=6a6033037b480b67f52b2cb780b8e3a2&language=es-MX&page=${pagina}`;
 
@@ -27,26 +31,43 @@ async function getFechas() {
         } catch (error) {
             console.log(error)
         }
+
+        if (pagina == 10) {
+            mostrarFechas();
+        }
     }
 }
 
+//para fecha de ejemplo h = "2023-02-15" => AA/MM/DD
+//para obtener el año h.substring(0,4) = "2023"
+//para obtener el año y mes h.substring(0,7) = "2023-02"
+
 function cargarFechas(fechas) {
 
-    let agregarFechas = [];
     fechas.results.forEach(pelicula => {
         
         if (agregarFechas.length == 0){
-            agregarFechas.push(pelicula.release_date);
+            agregarFechas.push(pelicula.release_date.substring(0,7));//obtenemos solo el año y el mes
 
         } else {
-            let existeFecha = agregarFechas.some(fecha => fecha === pelicula.release_date)
+            let existeFecha = agregarFechas.some(fecha => fecha === pelicula.release_date.substring(0,7));
 
             if (existeFecha == false) {
-                agregarFechas.push(pelicula.release_date);
+                agregarFechas.push(pelicula.release_date.substring(0,7));
             }
         }
-        
-        
     });
+    
 }
 
+console.log(agregarFechas);
+
+function mostrarFechas() {
+    const selectFecha = document.querySelector('#selectFecha');
+
+    agregarFechas.forEach(itemdate => {
+        const item = document.createElement('option');
+        item.innerHTML = itemdate;
+        selectFecha.appendChild(item);
+    });
+}
