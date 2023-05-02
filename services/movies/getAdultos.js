@@ -20,7 +20,7 @@ async function getMoviesAdulto() {
                 console.log("Pusiste la llave mal");
 
             } else if (response.status === 404) {
-                console.log("La peliucla para adultos que estas buscando no existe");
+                console.log("La pelicula para adultos que estas buscando no existe");
             } 
             
         } catch (error) {
