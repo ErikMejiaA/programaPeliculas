@@ -10,6 +10,17 @@ body {
 	color: #1d1d1d;
 }
 
+.logo {
+	width: 10%;
+	height: 10%;
+}
+
+.logo img {
+	width: 50%;
+	height: auto;
+}
+
+/*------------------header de la pagina---------------*/
 .contEncabezado {
 	position: fixed;
 	top: 0;
@@ -17,17 +28,19 @@ body {
 	display: flex;
 	text-align: center;
 	width: 100%;
-	padding: 2%;
-	box-sizing: border-box;
+	padding: 0.7%;
+	z-index: 1;
+	align-items: center;
 }
 
 .contenedorLinks {
 	display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     list-style: none; /*para quitar las viñetas de la lista*/
     width: 100%;
 	font-size: 80%;
+	flex-wrap: wrap;
 }
 
 .links-item {
@@ -36,8 +49,6 @@ body {
 }
 
 .links-item a {
-	
-    text-decoration: none;
     text-decoration: none;
     justify-content: center;
     background-size: cover;
@@ -51,11 +62,38 @@ a:hover {
 	cursor: pointer;
 	color: #fff;
 }
+/*-----------------------------------------------*/
 
+.section {
+	margin-top: 90px;
+}
+
+.section h1 {
+	color: #100a1f;
+	text-align: center;
+	font-family: 'Caveat', cursive;
+}
+
+.selector {
+	text-align: center;
+}
+
+.selector select {
+	text-align: center;
+	font-family: 'Caveat', cursive;
+	background-color: #e0e0e0;
+	margin-top: 1%;
+	padding: 0.5%;
+	border-radius: 20px;
+	font-weight: 700;
+	border-color: #100a1f;
+}
+
+/*-----------------cuerpo de la pagina-----------*/
 .contenedor {
 	width: 90%;
 	max-width: 1000px;
-	margin: 80px auto 100px auto;
+	margin: 20px auto 100px auto;
 
 	/*para una pagina de galeria responsibe*/
     display: grid;
@@ -87,7 +125,8 @@ a:hover {
 	margin-bottom: 10px;
 	border-radius: 15px;
 }
-
+/*-----------------------------------------------------*/
+/*---------------------footer de la pagina-------------*/
 .paginacion {
 	position: fixed;
 	bottom: 0;
@@ -119,3 +158,4 @@ a:hover {
 .paginacion button:hover {
 	background: #137c32;
 }
+/*+++++++++++++++++++++++++++++++++++++++++++++*/
