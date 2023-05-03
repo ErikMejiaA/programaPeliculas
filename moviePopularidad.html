@@ -8,7 +8,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/estilos.css">
-	<!--<script src="services/movies/getMovies.js" defer></script>-->
+	<script src="services/movies/listMoviePopular.js" defer></script>
 	
 	<script src="app/app.js" type="module" defer></script>
 	<title>PELICULAS POR POPULARIDAD</title>
@@ -23,8 +23,8 @@
 	<!--Cuerpo de la pagina-->
 	<main>
 		<section class="section">
-            <h1>PELICULAS CON MÁS POPULARIDAD</h1>
-			
+            <h1 class="titulo-principal">PELICULAS CON MÁS POPULARIDAD</h1>
+			<p class="popularidad-rango"></p>
 			<div class="contenedor" id="contenedor">
 				
 
@@ -38,6 +38,7 @@
 		<div class="paginacion">
 			<button id="btnAnterior">Anterior</button>
 			<button id="btnSiguiente">Siguiente</button>
+			<span></span>
 		</div>
 	</footer>
 	
