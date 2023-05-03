@@ -19,7 +19,7 @@ body {
 
 .logo img {
 	width: 50%;
-	height: auto;
+	
 }
 
 /*------------------header de la pagina---------------*/
@@ -89,6 +89,12 @@ a:hover {
 	border-radius: 20px;
 	font-weight: 700;
 	border-color: #100a1f;
+		
+}
+
+.contenerdor-buscar {
+	text-align: center;
+	margin-top: 1%;
 }
 
 /*-----------------cuerpo de la pagina-----------*/
@@ -159,6 +165,7 @@ a:hover {
 
 .paginacion button:hover {
 	background: #137c32;
+	cursor: pointer;
 }
 /*+++++++++++++++++++++++++++++++++++++++++++++*/
 
@@ -167,12 +174,11 @@ a:hover {
     .section{
 		margin-top: 120px;
         width: 100%;
-        
-        
     }
 
 	.section h1 {
 		font-weight: 600;
+		font-size: 110%;
 	}
 
 	.selector select {

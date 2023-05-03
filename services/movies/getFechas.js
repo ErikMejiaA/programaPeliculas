@@ -5,11 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 let agregarFechas = [];
+ //total de registros 500
+ //se van hacer para solo 3 registros mas 1
+let numeroRegistros = 3;
 
 async function getFechas() {
-    //total de registros 500
-    //se van hacer para solo 10 registros
-    for (let pagina = 1; pagina < 11; pagina ++ ) {
+   
+    for (let pagina = 1; pagina < numeroRegistros + 1; pagina ++ ) {
 
         const URL_API = `https://api.themoviedb.org/3/movie/popular?api_key=6a6033037b480b67f52b2cb780b8e3a2&language=es-MX&page=${pagina}`;
 
@@ -20,7 +22,6 @@ async function getFechas() {
             if (response.status === 200) {
                 const data = await response.json();
                 cargarFechas(data);
-
             } else if (response.status === 401) {
                 console.log("Pusiste la llave mal");
 
@@ -32,7 +33,7 @@ async function getFechas() {
             console.log(error)
         }
 
-        if (pagina == 10) {
+        if (pagina == numeroRegistros) {
             mostrarFechas();
         }
     }
