@@ -57,7 +57,6 @@ function cargarPeliculasPopular(peliculasPopular) {
             
             popularPeliculas.push(peliculasPopular.results[posi]);
             document.querySelector(".popularidad-rango").innerHTML = `peliculas con una puntuación: >${puntosPopular}`;
-
         } 
     });
 

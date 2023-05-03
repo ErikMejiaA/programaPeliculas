@@ -4,11 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 let peliculasApi = [];
+//total de registros 500
+//se van hacer para solo 4 registros mas 1
+let numeroRegistros = 4;
 
 async function datosPeliculas() {
-    //total de registros 500
-    //se van hacer para solo 3 registros mas 1
-    for (let pagina = 1; pagina < 4; pagina ++ ) {
+    
+    for (let pagina = 1; pagina < numeroRegistros + 1; pagina ++ ) {
 
         const URL_API = `https://api.themoviedb.org/3/movie/popular?api_key=6a6033037b480b67f52b2cb780b8e3a2&language=es-MX&page=${pagina}`;
 

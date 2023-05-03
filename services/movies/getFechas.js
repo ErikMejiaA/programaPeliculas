@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let agregarFechas = [];
  //total de registros 500
- //se van hacer para solo 3 registros mas 1
-let numeroRegistros = 3;
+ //se van hacer para solo 4 registros mas 1
+let numeroRegistros = 4;
 
 async function getFechas() {
    
